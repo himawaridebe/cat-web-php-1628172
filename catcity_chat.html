@@ -1,0 +1,57 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width" />
+<title>catcity一言コメント</title>
+<style>
+@font-face {
+    font-family: 'M PLUS Rounded 1c';
+    src: url('MPLUSRounded1c-Medium.ttf');
+}
+body {
+  color: #FFFFFF;
+  font-family: 'M PLUS Rounded 1c';
+  background-image: url('wood.jpg');
+  background-size: 15% auto;
+}
+.c1 {
+  color: #FFFFFF;
+}
+</style>
+<script>
+
+</script>
+</head>
+<body>
+  <h1>一言コメント</h1>
+  <h5>ここでは一言コメントをすることができます。</h5>
+  <p>
+  <img src="catcitydebe.png" width="100px" align="middle">
+  PHPを使っているよ!
+  </p>
+  <button type="button" style="background-color: #D2FF7F;" onclick="location.href = 'catcity-home.html';">ホームへ</button>
+
+<!-- �ꌾ�R�����g�t�H�[�� START ----->
+<br>
+<table border="0" cellspacing="0" cellpadding="1">
+  <tr>
+    <td>
+<form method="POST" action="comment.php?rep=1" target="com">
+<span style="font-size:18px;font-weight:100;color:#817E7E;">■ </span><b class="c1">一言チャット (100文字まで, 大文字を1文字含む)</b><br>
+<input type="text" id="comment" name="comment" size="47" style="width:535;border:1px solid #00ccff">
+<input type="submit" id="submit" value=" 送信 " style="width:54">
+<button type="button" style="background-color: #80FF7F;" onclick="location.reload(true);">もう一度、送信する!</button>
+    </td></form>
+  </tr>
+  <tr>
+    <td>
+<div id="commentv" style="font-size:13px;line-height:15px;color:#B5FFB6;width:280px;height:190px;border:1px solid #00ccff;padding:8px;overflow-y:scroll;display:none;"></div>
+<iframe name="com" src="comment.php" id="com" style="width:301px;height:201px;frameborder:0px;border:0px;padding:0px;overflow:hidden;display:none;"></iframe>
+    </td>
+  </tr>
+</table>
+<br>
+<!-- �ꌾ�R�����g�t�H�[�� END ----->
+
+</body>
+</html>
