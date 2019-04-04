@@ -1,0 +1,79 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width" />
+<title>onigiri com js</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:500&subset=japanese');
+
+body {
+  background-image: url('wood.jpg');
+  background-size: 15% auto;
+  /*background-color: #5B2323;*/
+  font-family: 'M PLUS Rounded 1c';
+  color: #D3D3D3;
+}
+
+.c1 {
+  color: #9ACD32;
+}
+
+.clock {
+  border: 1px;
+  width: 300px;
+  text-align: center;
+  color: #24B326;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  font-size: 10px;
+}
+
+</style>
+<script>
+function set2fig(num) {
+
+   var ret;
+   if( num < 10 ) { ret = "0" + num; }
+   else { ret = num; }
+   return ret;
+}
+function showClock2() {
+   var nowTime = new Date();
+   var nowHour = set2fig( nowTime.getHours() );
+   var nowMin  = set2fig( nowTime.getMinutes() );
+   var nowSec  = set2fig( nowTime.getSeconds() );
+   var msg = "" + nowHour + ":" + nowMin + ":" + nowSec + "";
+   document.getElementById("RealtimeClockArea2").innerHTML = msg;
+}
+setInterval('showClock2()',10);
+
+document.write("JavaScript check: ok ,build")
+
+</script>
+</head>
+<body>
+  <dev class="clock">
+  <h5 id="RealtimeClockArea2"></h5>
+  </dev>
+  <dev class="c1">
+    <h2>catcity web app</h2>
+  </dev>
+
+  <button type="button"onclick="window.location.href = 'app_omikuzi.html'"style="background-image: url('catcitysunset.jpg');background-size: cover;
+  background-position: center;width: 80px;
+  height: 80px;
+  color: #FFFFFF;
+  -webkit-border-radius:50px;border-radius: 50%;"
+>おみくじ</button>
+
+
+<div id="footer">JavaScript Copyright © 2019 Catcity. All rights reserved.</div>
+
+</body>
+
+</html>
