@@ -1,0 +1,181 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width" />
+<title>onigirimediaplayer</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:500&subset=japanese');
+
+
+body {
+  font-family: 'M PLUS Rounded 1c';
+  background-image: url("backg1.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #AFEEEE;
+}
+body::before {
+  content: "";
+  background: url("backg1.png") no-repeat center center;
+  background-size: cover;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.c1 {
+  color: green;
+}
+.c2 {
+  color: red;
+}
+
+/*ヘッダーまわりはご自由に*/
+header {
+  padding:10px;
+  /* background: skyblue; */
+}
+
+#nav-drawer {
+  position: relative;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    vertical-align: middle;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span, #nav-open span:before, #nav-open span:after {
+    position: absolute;
+    height: 3px;/*線の太さ*/
+    width: 25px;/*長さ*/
+    border-radius: 3px;
+    background: #00BFFF;
+    display: block;
+    content: '';
+    cursor: pointer;
+}
+#nav-open span:before {
+    bottom: -8px;
+}
+#nav-open span:after {
+    bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+    display: none;/*はじめは隠しておく*/
+    position: fixed;
+    z-index: 99;
+    top: 0;/*全体に広がるように*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #696969;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;/*最前面に*/
+    width: 85%;/*右側に隙間を作る*/
+    max-width: 330px;/*最大幅*/
+    height: 100%;
+    opacity: 0.8;
+    background: #fff;/*背景色*/
+    transition: .3s ease-in-out;/*滑らかに表示*/
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);/*左に隠しておく*/
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+    display: block;/*カバーを表示*/
+    opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);/*中身を表示*/
+    box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+.c7 {
+  color: #228B22;
+}
+
+a {
+  color: skyblue;
+  text-decoration: none;
+}
+.pri {
+  color: #1E90FF;
+}
+.so {
+  color: #D2691E;
+}
+</style>
+</head>
+<header>
+
+  <div id="nav-drawer">
+      <input id="nav-input" type="checkbox" class="nav-unshown">
+      <label id="nav-open" for="nav-input"><span></span></label>
+      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+      <div id="nav-content">
+        <!-- ここはheaderメニューです。 -->
+
+        <dev class="c7">
+        <h3>-Menu-</h3>
+      </dev>
+      <a href="catdevhome.html">Home</a>
+      <p></p>
+      <a href="OnigiriM_iOS_info.html">Onigiri Media Player for iOS</a>
+      <p></p>
+
+
+
+
+      </div>
+  </div>
+</header>
+
+<body>
+   <dev class="c7">
+<h1>Onigiri Media Player for iOS</h1>
+</dev>
+<img src="onigiriforios.png" width="100px">
+<h4>Onigiri Media Player for iOSではiOSデバイス内のミュージックライブラリにアクセスして、音楽を再生します。</h4>
+<h4>ミュージックライブラリに変更を加えたりはできませんので、ご安心ください。</h4>
+<dev class="pri">
+  <h3>プライバシーポリシー</h3>
+</dev>
+<h4>Onigiri Media Playerでは個人情報を取り扱うプログラムを実装しておりません。</h4>
+<h4>なので、Onigiri Media Playerをダウンロードしてくださった方の個人情報などはこちら側で扱うことが</h4>
+<h4>できませんので、ご安心ください。</h4>
+<dev class="so">
+  <h3>このアプリを開発するときに利用した素材</h3>
+</dev>
+<h4>charat</h4><h4>いらすとや</h4>
+
+</body>
+</html>

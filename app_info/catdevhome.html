@@ -1,0 +1,163 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width" />
+<title>catcity dev home</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:500&subset=japanese');
+
+
+body {
+  font-family: 'M PLUS Rounded 1c';
+  background-image: url("backg1.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #AFEEEE;
+}
+body::before {
+  content: "";
+  background: url("backg1.png") no-repeat center center;
+  background-size: cover;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.c1 {
+  color: green;
+}
+.c2 {
+  color: red;
+}
+
+header {
+  padding:10px;
+}
+
+#nav-drawer {
+  position: relative;
+}
+
+.nav-unshown {
+  display:none;
+}
+
+#nav-open {
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    vertical-align: middle;
+}
+
+#nav-open span, #nav-open span:before, #nav-open span:after {
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #00BFFF;
+    display: block;
+    content: '';
+    cursor: pointer;
+}
+#nav-open span:before {
+    bottom: -8px;
+}
+#nav-open span:after {
+    bottom: -16px;
+}
+
+#nav-close {
+    display: none;/*はじめは隠しておく*/
+    position: fixed;
+    z-index: 99;
+    top: 0;/*全体に広がるように*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #696969;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;/*最前面に*/
+    width: 85%;/*右側に隙間を作る*/
+    max-width: 330px;/*最大幅*/
+    height: 100%;
+    opacity: 0.8;
+    background: #fff;/*背景色*/
+    transition: .3s ease-in-out;/*滑らかに表示*/
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);/*左に隠しておく*/
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+    display: block;/*カバーを表示*/
+    opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);/*中身を表示*/
+    box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+.c7 {
+  color: #228B22;
+}
+
+a {
+  color: skyblue;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<header>
+  <div id="nav-drawer">
+      <input id="nav-input" type="checkbox" class="nav-unshown">
+      <label id="nav-open" for="nav-input"><span></span></label>
+      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+      <div id="nav-content">
+        <!-- ここはheaderメニューです。 -->
+
+        <dev class="c7">
+        <h3>-Menu-</h3>
+      </dev>
+      <a href="catdevhome.html">Home</a>
+      <p></p>
+      <a href="OnigiriM_iOS_info.html">Onigiri Media Player for iOS</a>
+      <p></p>
+
+
+
+
+      </div>
+  </div>
+</header>
+
+
+<body>
+   <dev class="c7">
+<h1>catcity dev team</h1>
+</dev>
+
+<h4>このwebサイトはcatcityの作ったアプリを紹介しているwebサイトです。</h4>
+<h4>catcityのアプリはプログラミングの勉強の為に作られています。なので、バグ</h4>
+<h4>が発生したりすることがあります。</h4>
+<h4>ただし、swiftコンパイラによる厳密なチェックがされていますので、お使いの</h4>
+<h4>iPhoneに変更を書き加えたりはできませんので、ご安心ください。</h4>
+
+</body>
+</html>
