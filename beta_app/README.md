@@ -6,7 +6,7 @@
 #### 必ずプロビジョニングプロファイルをインストールしてください。
 #### プロファイルのインストールが完了すると、アプリがインストールされます。
 
-[OnigiriMedia beta1.01をダウンロード](https://himawaridebe.github.io/cat-web-php-1628172/beta_app/manifest.plist)
+[OnigiriMedia beta1.01をダウンロード](itms-services://?action=download-manifest&url=himawaridebe.github.io/cat-web-php-1628172/beta_app/manifest.plist)
 
 ### ※このアプリを他のwebサイトなどで配布しないでください
 ### catcity Githubディレクトリ
